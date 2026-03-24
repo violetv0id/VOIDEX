@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>VOIDEX // internal_memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap');
+
+  :root {
+    --void: #07000f;
+    --purple: #7a5fff;
+    --text: #c9b8ff;
+    --text-dim: rgba(201, 184, 255, 0.6);
+    --border: rgba(122, 95, 255, 0.25);
+    --red-glow: #ff4466;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--void);
+    color: var(--text);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  /* Simple scanline */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px);
+    pointer-events: none;
+  }
+
+  .memo-container {
+    max-width: 550px;
+    border: 1px solid var(--border);
+    padding: 30px;
+    background: rgba(13, 0, 32, 0.5);
+    position: relative;
+  }
+
+  .memo-container::before {
+    content: 'READ_ME';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--void);
+    padding: 0 10px;
+    font-size: 11px;
+    color: var(--purple);
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+    color: var(--purple);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+  .raw-text {
+    color: var(--text);
+    border-left: 2px solid var(--purple);
+    padding-left: 20px;
+    margin: 25px 0;
+  }
+
+  .footer-note {
+    font-size: 12px;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+    margin-top: 25px;
+  }
+
+  a {
+    color: var(--purple);
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="memo-container">
+  <h1>About VOIDEX</h1>
+  
+  <p>To be clear: <strong>VOIDEX is not real.</strong></p>
+
+  <div class="raw-text">
+    Sometimes I struggle with mental stuff, and this is just my way of expressing that I'm busy. If you see VOIDEX on my Discord profile as my activity, just take it as me isolating.
+  </div>
+
+  <p>I am okay, but I am on DND for a reason. I'm using this as a barrier so I can just exist in VR without the pressure of being "available."</p>
+
+  <div class="footer-note">
+    I'll be back when the session is over. Thanks for understanding.<br><br>
+    <a href="index.html">← BACK TO MONITOR</a>
+  </div>
+</div>
+
+</body>
+</html>
